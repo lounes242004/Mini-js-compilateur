@@ -13,7 +13,7 @@ public class MiniCompilerUI extends JFrame {
     private JLabel statusLabel;
 
     public MiniCompilerUI() {
-        super("Mini Compilateur IF/ELSE - LL(1)");
+        super("Compilateur Try-catch - LL(1)");
 
         initLookAndFeel();
         initComponents();
@@ -43,10 +43,10 @@ public class MiniCompilerUI extends JFrame {
         sourceArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
         sourceArea.setTabSize(4);
         sourceArea.setText("""
-                try (x == 10) {
-                    y = 5;
+                try {
+                   let y = 5;
                 } catch(exption){
-                 ``
+                 
                 }
 
                 """);
@@ -74,7 +74,7 @@ public class MiniCompilerUI extends JFrame {
 
         
         JPanel topBar = new JPanel(new BorderLayout());
-        JLabel title = new JLabel("  Mini Compilateur Try-Catch - LL(1)");
+        JLabel title = new JLabel("Compilateur Try-Catch - LL(1)");
         title.setFont(title.getFont().deriveFont(Font.BOLD, 16f));
         topBar.add(title, BorderLayout.WEST);
         topBar.add(analyseButton, BorderLayout.EAST);
